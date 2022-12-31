@@ -2,6 +2,7 @@ import Link from "next/link"
 export default () => {
     return(
         <>
+        {console.log(process.env.customKey)}
             <div className="h-screen w-full flex justify-center items-center ">
                 <div className="flex flex-col items-center bg-slate-50 rounded-lg h-2/5 w-4/5 md:w-2/5 p-4 gap-3">
                     <h1 className="font-bold text-3xl text-black mb-4 text-center">

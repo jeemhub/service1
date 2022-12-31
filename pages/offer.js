@@ -1,25 +1,32 @@
 import Nav from "../components/Nav"
-import Post from "../components/Post"
-export default function ourpost(props){
+import Offer from "../components/Offer.js"
+import {db} from '../firebase'
+import { useState,useEffect } from "react";
+import { v4 } from "uuid";
+import { collection } from "firebase/firestore";
+import { getDocs } from "firebase/firestore";
+export default function ourpost(){
+  const offersCollectionRef = collection(db, "offers");
+    const [offers, setoffers] = useState([]);
+    useEffect(() => {
+        const getoffers = async () => {
+          const data = await getDocs(offersCollectionRef);
+          setoffers(data.docs.map((doc) => ({ ...doc.data()})));
+        };
+    
+        getoffers();
+      }, []);
     return(
     <main>
-        {console.log(props.data.name)}
+       
         <Nav/>
         <div className="h-screen flex flex-col justify-start items-end bg-gray-900 mt-24 p-5 text-white">
         <h1 className="text-5xl font-bold mb-5">اخر العروض</h1>
-        <Post/>
-        <Post/>
-        <Post/>
+    
+        {offers.map((offer)=>{
+            return(<Offer title={offer.title} details={offer.details} key={v4()} url={offer.url}></Offer>)
+        })}
         </div>
     </main>
     )
 }
-export async function getServerSideProps(context) {
-    const res= await fetch('http://localhost:3000/api/hello');
-    const data=await res.json()
-    return {
-      props: {
-        data:data
-      }, // will be passed to the page component as props
-    }
-  }

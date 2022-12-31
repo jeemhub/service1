@@ -6,12 +6,6 @@ import Homecom from '../components/Homecom';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const show=()=>{
-    axios.get('http://localhost:3000/api/hello').then(response => {
-      console.log(response.data.name);
-    });
-   
-  }
   return (
     <>
       <Head>
@@ -21,6 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main >
+       
         <Nav/>
         <Homecom/>
       </main>

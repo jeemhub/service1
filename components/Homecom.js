@@ -21,6 +21,11 @@ export default function Homecom() {
            خدمة تحويل محلي
         </Link>
       </button>
+      <button className="text-blue-600  p-2 mt-4 border-solid border-blue-600 border-2 rounded-2xl text-3xl">
+        <Link href="dashbord">
+          لوحة التحكم
+        </Link>
+      </button>
       <div className="text-3xl text-white mt-5 flex flex-row">
       <button className="mx-1"><FaWhatsapp/></button>
       <button className="mx-1"><FaFacebookF/></button>
