@@ -33,7 +33,7 @@ export default function Homecom() {
         </Link>
       </button>
       <button className="text-green-600  p-2 mt-4 border-solid border-green-600 border-2 rounded-2xl text-3xl">
-      <a href="https://api.whatsapp.com/send?phone=+97337010175&text=hellow this message from developer">Whatsapp Chat</a>  </button>
+      <a href="https://api.whatsapp.com/send?phone=+97337010175&text=hellow this message from developer %0a https://firebasestorage.googleapis.com/v0/b/servicestore-cc04d.appspot.com/o/posts%2FIMG_6817.JPGefd98ab1-6cda-45eb-b61d-0067c116876e?alt=media&token=30a62b85-26fd-47fb-9f90-74329e4af172">Whatsapp Chat</a>  </button>
       <div className="text-3xl text-white mt-5 flex flex-row">
         <button className="mx-1"><FaWhatsapp /></button>
         <button className="mx-1"><FaFacebookF /></button>
