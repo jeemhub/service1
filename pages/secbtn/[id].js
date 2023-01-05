@@ -8,8 +8,8 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 export default () => {
   const router = useRouter()
-  const profilesCollectionRef = collection(db, "secBtn");
   const [profiles, setposts] = useState([]);
+  const profilesCollectionRef = collection(db, "secBtn");
   useEffect(() => {
     const getprofiles = async () => {
       const data = await getDocs(profilesCollectionRef);

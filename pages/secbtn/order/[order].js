@@ -23,6 +23,7 @@ const offerCollectionRef = collection(db, "notifications");
 const  uploadFile = () => {
  
       addDoc(offerCollectionRef,{
+          id:v4(),
           name:name,
           number:number,
           address:address,

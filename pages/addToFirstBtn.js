@@ -8,6 +8,7 @@ import {
 } from "firebase/storage";
 import { useRef } from "react";
 import { storage ,db} from "../firebase";
+import Link from "next/link";
 import { v4 } from "uuid";
 import {
     collection,
@@ -165,6 +166,9 @@ function App() {
         }}
         />
       <button className="font-bold text-white text-2xl bg-blue-600 p-2 rounded-md w-full mt-2" onClick={uploadFile}>اضف عامل</button>
+      <Link className="text-blue-600 text-center font-bold  p-1 rounded-md" href='/dashbord'>
+                <button className="">الرجوع الى لوحة التحكم</button>
+             </Link>
         </div>
     </div>
   );

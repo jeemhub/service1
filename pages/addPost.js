@@ -8,6 +8,8 @@ import {
 } from "firebase/storage";
 import { useRef } from "react";
 import { storage ,db} from "../firebase";
+import Link from "next/link";
+
 import { v4 } from "uuid";
 import {
     collection,
@@ -30,6 +32,17 @@ function App() {
   const offerCollectionRef = collection(db, "posts");
 
   const  uploadFile = () => {
+    if(!title){
+      alert("ادخل العنوان")
+      return
+    }
+    if(!details){
+      setdetails(" ")
+    }
+    if(!imageUpload){
+      alert("ادخل صورة الخبر")
+      return
+    }
     if (imageUpload == null) return;
     const imageRef = ref(storage, `posts/${imageUpload.name + v4()}`);
     uploadBytes(imageRef, imageUpload).then((snapshot) => {
@@ -57,6 +70,7 @@ function App() {
         className="bg-gray-300 rounded-md p-2 w-full"
         type="text"
         onChange={(event) => {
+
           settitle(event.target.value);
         }}
       />
@@ -66,6 +80,7 @@ function App() {
         className="bg-gray-300 rounded-md p-2 w-full"
         type="text"
         onChange={(event) => {
+          
           setdetails(event.target.value);
         }}
       />
@@ -78,6 +93,9 @@ function App() {
         }}
         />
       <button className="font-bold text-white text-2xl bg-blue-600 p-2 rounded-md w-full mt-2" onClick={uploadFile}>اضف خبر</button>
+      <Link className="text-blue-600 text-center font-bold  p-1 rounded-md" href='/dashbord'>
+                <button className="">الرجوع الى لوحة التحكم</button>
+             </Link>
         </div>
     </div>
   );
