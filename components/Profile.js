@@ -11,7 +11,7 @@ export default (props) => {
       <div className="flex flex-row justify-end  gap-1 bg-white h-auto rounded-xl overflow-hidden">
       <a 
         className="self-start m-6 text-green-600 text-4xl"
-        href={`https://api.whatsapp.com/send?phone=+97337010175&text=${message+n}العمر ${props.Age+n}الجنسية ${props.nationality+n} السعر ${props.salary+n} الخبرة ${props.experience+n} اسم العاملة ${props.name+n}`}>
+        href={`https://api.whatsapp.com/send?phone=+97333401013&text=${message+n}العمر ${props.Age+n}الجنسية ${props.nationality+n} السعر ${props.salary+n} الخبرة ${props.experience+n} اسم العاملة ${props.name+n}`}>
              <AiOutlineWhatsApp></AiOutlineWhatsApp>
         </a>
         <div className="flex flex-col gap-2 items-end">
