@@ -6,10 +6,9 @@ import {
   listAll,
   list,
 } from "firebase/storage";
-import Link from "next/link";
-
 import { useRef } from "react";
-import { storage ,db} from "../firebase";
+import { storage ,db} from "../../firebase";
+import Link from "next/link";
 import { v4 } from "uuid";
 import {
     collection,
@@ -29,7 +28,6 @@ function App() {
     const experienceRef=useRef();
     const salaryRef=useRef();
     const nationalityRef=useRef();
-    const countryRef=useRef();
     const fileRef=useRef();
   const [imageUpload, setImageUpload] = useState(null);
   const [imageUrls, setImageUrls] = useState();
@@ -39,7 +37,6 @@ function App() {
   const [work,setwork]=useState();
   const [experience,setexperience]=useState();
   const [salary,setsalary]=useState();
-  const [country,setcountry]=useState();
   const [nationality,setnationality]=useState();
   const offerCollectionRef = collection(db, "secBtn");
 //   const info={
@@ -54,6 +51,42 @@ function App() {
 //     fileRef.current.value=null;
 //   };
   const  uploadFile = () => {
+    if( nameRef.current.value==''){
+      alert('املئ الحقل الفارغ');
+      return
+    }
+    if( nationalityRef.current.value==''){
+      alert('املئ الحقل الفارغ');
+      return
+    }
+    if(AgeRef.current.value==''){
+      alert('املئ الحقل الفارغ');
+      return
+    }
+    if(socialRef.current.value==''){
+      alert('املئ الحقل الفارغ');
+      return
+    }
+    if(workRef.current.value==''){
+      alert('املئ الحقل الفارغ');
+      return
+    }
+    if(experienceRef.current.value==''){
+      alert('املئ الحقل الفارغ');
+      return
+    }
+    if(salaryRef.current.value==''){
+      alert('املئ الحقل الفارغ');
+      return
+    }
+    if(fileRef.current.value==''){
+      alert('املئ الحقل الفارغ');
+      return
+    }
+    if(countryRef.current.value==''){
+      alert('املئ الحقل الفارغ');
+      return
+    }
     if (imageUpload == null) return;
     const imageRef = ref(storage, `secBtn/${imageUpload.name + v4()}`);
     uploadBytes(imageRef, imageUpload).then((snapshot) => {
@@ -67,7 +100,6 @@ function App() {
             work:work,
             experience:experience,
             salary:salary,
-            country:country,
             url:snn
         });
         nameRef.current.value=null;
@@ -78,7 +110,6 @@ function App() {
         experienceRef.current.value=null;
         salaryRef.current.value=null;
         fileRef.current.value=null;
-        countryRef.current.value=null;
       });
     });
     // createUser();
@@ -159,17 +190,6 @@ function App() {
         type="text"
         onChange={(event) => {
           setsalary(event.target.value);
-        }}
-      />
-    {/* //======================================= */}
-      {/* //====================================== */}
-      <input
-      ref={countryRef}
-      placeholder="اكتب الدولة"
-        className="bg-gray-300 rounded-md p-2 w-full"
-        type="text"
-        onChange={(event) => {
-          setcountry(event.target.value);
         }}
       />
     {/* //======================================= */}

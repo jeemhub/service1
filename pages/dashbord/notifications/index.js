@@ -3,10 +3,10 @@ export default () => {
     return(
         <>
             <div className="h-screen w-full flex flex-col justify-center items-center p-4">
-            <Link className="text-gray-900 bg-white font-bold p-2  rounded-md m-1" href='/'>
+            <Link className="text-gray-900 bg-white font-bold p-2  rounded-md m-1" href='/dashbord/notifications/orderFirstBtn'>
                 <button className="">طلبات عاملاتنا بالطلب</button>
              </Link>
-             <Link className="text-white font-bold border-solid p-2 border-2 border-white rounded-md m-1" href='/notifications/orderSecBtn'>
+             <Link className="text-white font-bold border-solid p-2 border-2 border-white rounded-md m-1" href='/dashbord/notifications/orderSecBtn'>
                 <button className="">طلبات خدمة التحويل المحلي</button>
              </Link>
              

@@ -21,8 +21,11 @@ export default () => {
                         <li dir='rtl' className='text-white text-lg'>4. راحتكم ورضاكم هو غايتنا</li>
                     </ul>
                 <h1 className='font-bold text-white text-3xl mt-3'> رؤيتنا </h1>
-                <p>ان نصبح الخيار الاول في ا</p>
-               
+               <p className='text-white mt-2 text-end'>ان نصبح الخيار الاول للافراد في استخدام العمالة المنزلية</p>
+                <h1 className='font-bold text-white text-3xl mt-3'> رسالتنا </h1>
+               <p className='text-white mt-2 text-end'>تتلخص في راحة العمل وتوفير ما يناسبه من العمالة المنزلية بشروط الخاصة وانتاج افضل اساليب العمل من اجل تحقيق رؤيتنا واهدافنا والسعي دوما لراحة العميل ورضاه </p>
+                <h1 className='font-bold text-white text-3xl mt-3'> اهدافنا </h1>
+                <p className='text-white mt-2 text-end'>راحة الامهات والكبار في السن ومساعدة الموضفات والامهات العاملات على استخدام العاملات الماهرات في اعمال المنزل والطباخات والمربيات وكل ما تحتاجونه </p>
             </div>
         
        

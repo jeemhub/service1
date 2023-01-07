@@ -23,7 +23,7 @@ export default (props) => {
           
           <Link
             className="p-1 rounded-lg bg-blue-600 text-white font-bold"
-            href={`/secbtn/${props.id}`}>
+            href={`/firstbtn/${props.id}`}>
             <button className="p-1 rounded-lg bg-blue-600 text-white font-bold">
               المزيد من التفاصيل
             </button>

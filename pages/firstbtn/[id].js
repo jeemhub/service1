@@ -11,22 +11,23 @@ export default () => {
   const n='%0a';
   const router = useRouter()
   const [profiles, setposts] = useState([]);
-  const profilesCollectionRef = collection(db, "secBtn");
+  const profilesCollectionRef = collection(db, "firstBtn");
   useEffect(() => {
     const getprofiles = async () => {
       const data = await getDocs(profilesCollectionRef);
-      setposts(data.docs.map((doc) => ({ ...doc.data() })));
+      setposts(data.docs.map((doc) => ({ ...doc.data(),ip:doc.id })));
     };
     getprofiles();
   }, []);
   const profile = profiles.filter((ele) => {
-    return ele.id == router.query.id;
+    return ele.ip == router.query.id;
   })
 
   return (
     <>
       <Nav></Nav>
-      {console.log(profile[0])}
+      <br></br>
+      <br></br>
       <br></br>
       <div className="flex items-center flex-col  p-2 justify-center h-auto">
         <div className=" rounded-lg">
@@ -68,8 +69,8 @@ export default () => {
               {/* <Link className="text-white bg-blue-600 my-2 text-center font-bold rounded-lg w-full p-2" href={`/secbtn/order/${profile[0]?.id}`}>
                   <button className="text-white bg-blue-600 my-2 text-center font-bold rounded-lg w-full p-2">اطلب</button>
               </Link> */}
-                  <a 
-        href={`https://api.whatsapp.com/send?phone=+97333401013&text=${message+n}العمر ${profile[0]?.Age+n}الجنسية ${profile[0]?.nationality+n} السعر ${profile[0]?.salary+n} الخبرة ${profile[0]?.experience+n} اسم العاملة ${profile[0]?.name+n}`}
+              <a 
+        href={`https://api.whatsapp.com/send?phone=+97337010175&text=${message+n}العمر ${profile[0]?.Age+n}الجنسية ${profile[0]?.nationality+n} السعر ${profile[0]?.salary+n} الخبرة ${profile[0]?.experience+n} اسم العاملة ${profile[0]?.name+n}`}
         className="text-white bg-green-600 my-2 text-center font-bold rounded-lg w-full p-2 block">اطلب باستخدام الواتساب</a>
             </div>
             </div>
