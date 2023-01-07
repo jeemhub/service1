@@ -15,7 +15,7 @@ export default function Homecom() {
           المناسبة لاحتياجاتكم؟
         </h1>
         <p className="text-white text-lg">مكتب ام خليفة يوفر لكم افضل العاملات</p>
-        <p className="text-white text-lg">المنتقاة بعناية لتتوافق مع اختياجاتكم وميزانيتكم</p>
+        <p className="text-white text-lg">المنتقاة بعناية لتتوافق مع احتياجاتكم وميزانيتكم</p>
       </div>
       <button className="text-gray-900 px-7 bg-blue-600 p-2 mt-6 font-bold rounded-2xl text-2xl">
         <Link href="/firstbtn">
@@ -41,4 +41,5 @@ export default function Homecom() {
     </div>
   )
 }
+
 
