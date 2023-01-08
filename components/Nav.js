@@ -4,7 +4,6 @@ import { BsXLg } from 'react-icons/bs';
 import { BiCart } from "react-icons/bi";
 import { useState } from 'react';
 import { GiAmericanFootballHelmet } from "react-icons/gi";
-import Logo from '../public/Logo.jpg'
 import { useSelector } from 'react-redux';
 import Image from 'next/image';
 import Link from 'next/link';

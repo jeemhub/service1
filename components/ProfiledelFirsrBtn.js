@@ -10,7 +10,7 @@ export default (props) => {
   const router = useRouter();
 
   const DeletePost=async(id)=>{
-      const userdoc=doc(db,'secBtn',id);
+      const userdoc=doc(db,'firstBtn',id);
       await deleteDoc(userdoc);
       router.refresh();
 
