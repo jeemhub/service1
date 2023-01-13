@@ -1,5 +1,7 @@
 import Nav from '../components/Nav'
 
+
+
 export default () => {
     return(
      <>
@@ -8,22 +10,22 @@ export default () => {
             <Nav></Nav>
             <div className='h-screen w-full flex flex-col justify-start items-end p-4 mt-28'>
                 <h1 className='font-bold text-white text-3xl '>من نحن ؟</h1>
-                <p className='text-white mt-2 text-end'>نحن مكتب فراغ فراغ عاملة رسمي مصرح به من قبل سوق العمل البحريني </p>
+                <p className='text-white mt-2 text-end'>نحن مكتب استقدام أيدي عاملة رسمي مصرح به من قبل سوق العمل البحريني </p>
                 <p className='text-black p-1 font-bold my-1 bg-white rounded-lg text-end'>"LMRA" </p>
-                <p className='text-white  text-end'> نلتمس احتياجات العملاء وخصوصا الامهات الكبيرات في السن والامهات الموضفات ونقدر حاجتهم للعنالة النزلية ونبحث عن  الافضل  والمساهمة في توفير الراحة المجتمعة لكل الفئات والوصول الى النتيجة المرجوة لكل الاطراف</p>
+                <p className='text-white  text-end'> نلتمس احتياجات العملاء  وخصوصاً الأمهات الكبيرات في السن والأمهات الموظفات ونقدر حاجتهم للعمالة المنزلية ونبحث عن  الأفضل  والمساهمة في توفير الراحة المجتمعية لكل الفئات والوصول الى النتيجة المرجوة لكل الأطراف</p>
            
 
                 <h1 className='font-bold text-white text-3xl mt-3'> شعاراتنا </h1>
                     <ul className=' text-right ltr '>
-                        <li dir='rtl' className='text-white text-lg'>1. الثقة والمصداقية</li>
-                        <li dir='rtl' className='text-white text-lg'>2. انتقاء افضل العاملات من افضل المناطق</li>
-                        <li dir='rtl' className='text-white text-lg'>3. سرعة الانجاز</li>
+                        <li dir='rtl' className='text-white text-lg'>1. الثقة والمصداقية في التعامل</li>
+                        <li dir='rtl' className='text-white text-lg'>2. انتقاء أفضل العاملات من أفضل المناطق</li>
+                        <li dir='rtl' className='text-white text-lg'>3. سرعة الإنجاز</li>
                         <li dir='rtl' className='text-white text-lg'>4. راحتكم ورضاكم هو غايتنا</li>
                     </ul>
                 <h1 className='font-bold text-white text-3xl mt-3'> رؤيتنا </h1>
-               <p className='text-white mt-2 text-end'>ان نصبح الخيار الاول للافراد في استخدام العمالة المنزلية</p>
+               <p className='text-white mt-2 text-end'>أن نصبح الخيار الأول للأفراد في استقدام العمالة المنزلية</p>
                 <h1 className='font-bold text-white text-3xl mt-3'> رسالتنا </h1>
-               <p className='text-white mt-2 text-end'>تتلخص في راحة العمل وتوفير ما يناسبه من العمالة المنزلية بشروط الخاصة وانتاج افضل اساليب العمل من اجل تحقيق رؤيتنا واهدافنا والسعي دوما لراحة العميل ورضاه </p>
+               <p className='text-white mt-2 text-end'>تتلخص في راحة العميل وتوفير ما يناسبه من العمالة المنزلية بشروطه الخاصة وانتهاج أفضل أساليب العمل من أجل تحقيق رؤيتنا وأهدافنا والسعي دوما لراحة العميل ورضاه </p>
                 <h1 className='font-bold text-white text-3xl mt-3'> اهدافنا </h1>
                 <p className='text-white mt-2 text-end'>راحة الامهات والكبار في السن ومساعدة الموضفات والامهات العاملات على استخدام العاملات الماهرات في اعمال المنزل والطباخات والمربيات وكل ما تحتاجونه </p>
             </div>
