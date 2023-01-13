@@ -6,14 +6,14 @@ export default (props) => {
     const router = useRouter();
 
     const DeletePost=async(id)=>{
-        const userdoc=doc(db,'posts',id);
+        const userdoc=doc(db,'info',id);
         await deleteDoc(userdoc);
         router.refresh();
 
       }
     return (
         <>
-            <div className="bg-white text-gray-900 h-auto md:w-auto w-full   rounded-md mt-5 p-2 flex flex-col items-end">
+            <div className="bg-white text-gray-900 h-auto md:w-auto w-full  md:pl-10 rounded-md mt-5 p-2 flex flex-col items-end">
                 <h1 className="font-bold text-2xl">
                     {props.title}
                 </h1>
