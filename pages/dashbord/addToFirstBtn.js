@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import {
   ref,
   uploadBytes,
@@ -22,6 +23,7 @@ import {
 
 
 function App() {
+  const router=useRouter();
     const nameRef=useRef();
     const AgeRef=useRef();
     const socialRef=useRef();
@@ -107,6 +109,7 @@ function App() {
       });
     });
     // createUser();
+    router.back()
     
   };
 

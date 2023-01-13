@@ -15,7 +15,7 @@ export default function Homecom() {
       
       <div className="flex flex-col items-center w-full h-auto">
         <h1 className="text-white text-xl font-bold mb-2 md:text-4xl">
-          هل تجد صعوبة في ايجاد العاملة المنزلية
+          هل تجد صعوبة في إيجاد العاملة المنزلية
         </h1>
         <h1 className="text-white text-xl font-bold mb-5 md:text-4xl">
           المناسبة لاحتياجاتكم؟
@@ -25,7 +25,7 @@ export default function Homecom() {
       </div>
       <button className="text-gray-900 px-7 bg-blue-600 p-2 mt-6 font-bold rounded-2xl text-2xl">
         <Link href="/firstbtn">
-          عاملاتنا مطيعات بالطلب
+          عاملاتنا المطيعات بالطلب
         </Link>
       </button>
       <button className="text-blue-600  p-2 mt-2 border-solid border-blue-600 border-2 rounded-2xl text-2xl">

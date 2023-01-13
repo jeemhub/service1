@@ -21,7 +21,7 @@ export default function ourpost(){
        
         <Nav/>
         <div className="h-screen flex flex-col justify-start items-end bg-gray-900 mt-24 p-5 text-white">
-        <h1 className="text-5xl font-bold mb-5">اخر العروض</h1>
+        <h1 className="text-5xl font-bold mb-5">آخر العروض</h1>
     
         {offers.map((offer)=>{
             return(<Offer title={offer.title} details={offer.details} key={v4()} url={offer.url}></Offer>)

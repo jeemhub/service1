@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import {
   ref,
   uploadBytes,
@@ -20,13 +21,14 @@ import {
 
 import Link from "next/link";
 function App() {
+  const router=useRouter();
     const titleRef=useRef();
     const detailsRef=useRef();
     const fileRef=useRef();
   const [imageUpload, setImageUpload] = useState(null);
   const [imageUrls, setImageUrls] = useState();
-  const [title,settitle]=useState();
-  const [details,setdetails]=useState();
+  const [title,settitle]=useState(' ');
+  const [details,setdetails]=useState(' ');
   const offerCollectionRef = collection(db, "offers");
 //   const info={
 //     title:title,
@@ -40,7 +42,17 @@ function App() {
 //     fileRef.current.value=null;
 //   };
   const  uploadFile = () => {
-    if (imageUpload == null) return;
+    if(!title){
+      alert("ادخل العنوان")
+      return
+    }
+    if(!details){
+      setdetails(" ")
+    }
+    if(!imageUpload){
+      alert("ادخل صورة الخبر")
+      return
+    }
     const imageRef = ref(storage, `offers/${imageUpload.name + v4()}`);
     uploadBytes(imageRef, imageUpload).then((snapshot) => {
       getDownloadURL(snapshot.ref).then((snn) => {
@@ -54,6 +66,7 @@ function App() {
         fileRef.current.value=null;
       });
     });
+    router.back();
     // createUser();
     
   };

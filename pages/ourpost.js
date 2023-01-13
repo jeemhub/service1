@@ -21,7 +21,7 @@ export default function ourpost(){
         {console.log(posts)}
         <Nav/>
         <div className="h-screen flex flex-col justify-start items-end bg-gray-900 mt-24 p-5 text-white">
-        <h1 className="text-5xl font-bold mb-5">اخر الاخبار</h1>
+        <h1 className="text-5xl font-bold mb-5">آخر الأخبار</h1>
         
         {posts.map((post)=>{
             return(<Post title={post.title} details={post.details} key={v4()} url={post.url}></Post>)

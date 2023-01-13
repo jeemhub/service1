@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import {
   ref,
   uploadBytes,
@@ -22,8 +23,9 @@ import {
 
 
 function App() {
-    const titleRef=useRef();
-    const detailsRef=useRef();
+  const router=useRouter()
+    const titleRef=useRef(' ');
+    const detailsRef=useRef(' ');
     const fileRef=useRef();
   const [imageUpload, setImageUpload] = useState(null);
   const [imageUrls, setImageUrls] = useState();
@@ -57,7 +59,7 @@ function App() {
         fileRef.current.value=null;
       });
     });
-    
+    router.back();
   };
 
   return (

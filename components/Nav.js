@@ -19,7 +19,7 @@ function Nav() {
                     <div className='flex flex-row items-center'>
                         
                         <Link href="/" >
-                           <h1 className='text-lg text-white font-bold border-solid border-2 border-white rounded-lg p-2'>مكتب ام خليفة</h1>
+                           <h1 className='text-lg text-white font-bold border-solid border-2 border-white rounded-lg p-2'>مكتب أم خليفة</h1>
                         </Link>
                     </div>
                 </div>
@@ -32,10 +32,10 @@ function Nav() {
                     عن المكتب 
                 </Link></li>
                 <li onClick={()=>settogol(!togol)} className='md:mx-4'><Link href="/price" >
-                     اسعارنا
+                     أسعارنا
                 </Link></li>
                 <li onClick={()=>settogol(!togol)} className='md:mx-4'><Link href="/ourpost" >
-                    اخبارنا
+                    أخبارنا
                 </Link></li>
                 <li onClick={()=>settogol(!togol)} className='md:mx-4'><Link href="/offer" >
                     عروضنا
