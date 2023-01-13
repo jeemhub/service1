@@ -1,9 +1,12 @@
-import { FaWhatsapp } from "react-icons/fa";
+import { FaSnapchat, FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
+import { FaSnapchatGhost} from "react-icons/fa";
+import { FaTiktok} from "react-icons/fa";
+import { useRouter } from "next/router";
 import img from '../public/photo_2023-01-08_21-24-24-removebg-preview.png'
 import Link from 'next/link';
 export default function Homecom() {
+  const router = useRouter()
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-gray-900">
       <img 
@@ -35,11 +38,12 @@ export default function Homecom() {
           لوحة التحكم
         </Link>
       </button>
-      {/* <div className="text-3xl text-white mt-5 flex flex-row">
-        <button className="mx-1"><FaWhatsapp /></button>
-        <button className="mx-1"><FaFacebookF /></button>
-        <button className="mx-1"><FaInstagram /></button>
-      </div> */}
+      <div className="text-3xl text-white mt-5 flex flex-row">
+        <button onClick={()=>{router.push('https://www.snapchat.com/add/umkhalifa_bh?share_id=XbouJZ3')}} className="mx-1"><FaSnapchatGhost /></button>
+        <button onClick={()=>{router.push('https://api.whatsapp.com/send?phone=+97333401013&text=مرحبا')}} className="mx-1"><FaWhatsapp /></button>
+        <button onClick={()=>{router.push('https://www.instagram.com/p/CnCmLqBIhQ5/?igshid=YmMyMTA2M2Y=')}} className="mx-1"><FaInstagram /></button>
+        <button onClick={()=>{router.push('https://vt.tiktok.com/ZS8rrF3gU/')}} className="mx-1"><FaTiktok /></button>
+      </div>
 
     </div>
   )
