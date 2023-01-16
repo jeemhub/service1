@@ -55,7 +55,7 @@ export default () => {
                         <div className="border-black border-solid gap-2 w-full border-2 flex flex-col self-center justify-center  items-center text-black p-2 h-auto rounded-lg">
                             <h1 className="font-bold text-2xl">حذف العروض</h1>
                             <p> حذف من صفحة العروض</p>
-                            <Link className="bg-blue-500 text-white font-bold text-xl p-2 rounded-md w-full" href='/dashbord//deleteoffer'>
+                            <Link className="bg-blue-500 text-white font-bold text-xl p-2 rounded-md w-full" href='/dashbord/deleteoffer'>
                                 <button className="bg-blue-500 text-white font-bold text-xl p-2 rounded-md w-full"> انتقل</button>
                             </Link>
                         </div>
