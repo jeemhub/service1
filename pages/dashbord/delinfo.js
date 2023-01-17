@@ -15,7 +15,7 @@ export default function ourpost(props) {
   const DeletePost = async (id) => {
     const userdoc = doc(db, "info", id);
     await deleteDoc(userdoc);
-    router.push("/dashbord/delinfo");
+    router.push("/dashbord");
   };
   function sortArrayOfObjectById(arr) {
     var lengthOfArray = arr.length;
