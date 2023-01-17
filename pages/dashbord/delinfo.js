@@ -1,6 +1,7 @@
 import { db } from "../../firebase";
 import { v4 } from "uuid";
 import { useRouter } from "next/router";
+import { useState,useEffect } from "react";
 import {
   collection,
   getDocs,
@@ -32,13 +33,22 @@ export default function ourpost(props) {
     }
     return result;
   }
+  const [infoes,setinfoes]=useState([]);
+const postsCollectionRef = collection(db, "info");
+useEffect(() => {
+  const getoffers = async () => {
+    const data = await getDocs(postsCollectionRef);
+    setinfoes(data.docs.map((doc) => ({ ...doc.data(), ip: doc.id })));
+  };
+  getoffers();
+}, []);
   return (
     <main>
-      {console.log(sortArrayOfObjectById(props.arr))}
+      {console.log(sortArrayOfObjectById(infoes))}
 
       <div className="h-screen flex flex-col justify-start items-end bg-gray-900 mt-24 p-5 text-white">
         <h1 className="text-5xl font-bold mb-5"> حذف معلومات</h1>
-        {sortArrayOfObjectById(props.arr).map((post) => {
+        {sortArrayOfObjectById(infoes).map((post) => {
           if (post.type == "h1") {
             return (
               <div
@@ -77,13 +87,4 @@ export default function ourpost(props) {
     </main>
   );
 }
-export async function getStaticProps(context) {
-  const postsCollectionRef = collection(db, "info");
-  const data = await getDocs(postsCollectionRef);
-  const arr = data.docs.map((doc) => ({ ...doc.data(), ip: doc.id }));
-  return {
-    props: {
-      arr: arr,
-    }, // will be passed to the page component as props
-  };
-}
+

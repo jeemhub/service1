@@ -7,21 +7,21 @@ import { collection } from "firebase/firestore";
 import { getDocs } from "firebase/firestore";
 
 export default function ourpost(props){
-  const [infoes,setinfoes]=useState([]);
   function sortArrayOfObjectById(arr){
-   var lengthOfArray=arr.length;
-   var newArray=arr.map(el=>{return(el.id)})
+    var lengthOfArray=arr.length;
+    var newArray=arr.map(el=>{return(el.id)})
     newArray=newArray.sort()
     var result=[];
-  for(var i=0;i<lengthOfArray;i++){
-        for(var j=0;j<lengthOfArray;j++){
-            if(arr[j].id == newArray[i]){
-                result.push(arr[j]);
-            }
+    for(var i=0;i<lengthOfArray;i++){
+      for(var j=0;j<lengthOfArray;j++){
+        if(arr[j].id == newArray[i]){
+          result.push(arr[j]);
         }
+      }
     }
     return(result);
-}
+  }
+const [infoes,setinfoes]=useState([]);
 const postsCollectionRef = collection(db, "info");
 useEffect(() => {
   const getoffers = async () => {
