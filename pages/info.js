@@ -49,7 +49,7 @@ export default function ourpost(props){
     </main>
     )
 }
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const postsCollectionRef = collection(db, "info");
   const data = await getDocs(postsCollectionRef);
   const arr=data.docs.map((doc) => ({ ...doc.data()}))
