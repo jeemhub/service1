@@ -7,6 +7,7 @@ import { collection } from "firebase/firestore";
 import { getDocs } from "firebase/firestore";
 
 export default function ourpost(props){
+  const [infoes,setinfoes]=useState([]);
   function sortArrayOfObjectById(arr){
    var lengthOfArray=arr.length;
    var newArray=arr.map(el=>{return(el.id)})
@@ -21,15 +22,24 @@ export default function ourpost(props){
     }
     return(result);
 }
+const postsCollectionRef = collection(db, "info");
+useEffect(() => {
+  const getoffers = async () => {
+    const data = await getDocs(postsCollectionRef);
+    setinfoes(data.docs.map((doc) => ({ ...doc.data()})));
+  };
+
+  getoffers();
+}, []);
     return(
     <main>
-        {console.log(sortArrayOfObjectById(props.arr))}
+        {console.log(sortArrayOfObjectById(infoes))}
         
         <Nav/>
         
         <div className="h-screen flex flex-col justify-start items-end bg-gray-900 mt-24 p-5 text-white">
         <h1 className="text-5xl font-bold mb-5"> معلومات تهمك</h1>
-        {sortArrayOfObjectById(props.arr).map((post)=>{
+        {sortArrayOfObjectById(infoes).map((post)=>{
           if(post.type == 'h1'){
             return(
             <div key={v4()}  className="rtl text-right border-white  my-2 p-1">
@@ -48,14 +58,4 @@ export default function ourpost(props){
         </div>
     </main>
     )
-}
-export async function getServerSideProps(context) {
-  const postsCollectionRef = collection(db, "info");
-  const data = await getDocs(postsCollectionRef);
-  const arr=data.docs.map((doc) => ({ ...doc.data()}))
-  return {
-    props: {
-      arr:arr
-    }, // will be passed to the page component as props
-  }
 }
