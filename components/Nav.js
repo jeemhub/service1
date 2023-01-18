@@ -4,12 +4,10 @@ import { BsXLg } from 'react-icons/bs';
 import { BiCart } from "react-icons/bi";
 import { useState } from 'react';
 import { GiAmericanFootballHelmet } from "react-icons/gi";
-import { useSelector } from 'react-redux';
 import Image from 'next/image';
 import Link from 'next/link';
 function Nav() {
     const [togol, settogol] = useState(true);
-    const count=useSelector((state)=>state.item.count);
    
     return (
         <>
