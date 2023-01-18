@@ -9,13 +9,13 @@ export default function ourpost(){
   const offersCollectionRef = collection(db, "offers");
     const [offers, setoffers] = useState([]);
     useEffect(() => {
-        const getoffers = async () => {
-          const data = await getDocs(offersCollectionRef);
-          setoffers(data.docs.map((doc) => ({ ...doc.data()})));
-        };
-    
-        getoffers();
-      }, []);
+      const getposts = async () => {
+        const data = await getDocs(offersCollectionRef);
+        setoffers(data.docs.map((doc) => ({ ...doc.data()})));
+      };
+  
+      getposts();
+    }, []);
     return(
     <main>
        

@@ -41,33 +41,29 @@ function App() {
 //     detailsRef.current.value=null;
 //     fileRef.current.value=null;
 //   };
-  const  uploadFile = () => {
-    if(!title){
-      alert("ادخل العنوان")
-      return
-    }
-    if(!details){
-      setdetails(" ")
-    }
-    if(!imageUpload){
-      alert("ادخل صورة الخبر")
-      return
-    }
-    const imageRef = ref(storage, `offers/${imageUpload.name + v4()}`);
-    uploadBytes(imageRef, imageUpload).then((snapshot) => {
-      getDownloadURL(snapshot.ref).then((snn) => {
-        addDoc(offerCollectionRef,{
-            title:title,
-            details:details,
-            url:snn
-        });
-   
+const  uploadFile = () => {
+  if(!title){
+    alert("ادخل العنوان")
+    return
+  }
+  if(!imageUpload){
+    alert("ادخل صورة الخبر")
+    return
+  }
+  if (imageUpload == null) return;
+  const imageRef = ref(storage, `offer/${imageUpload.name + v4()}`);
+  uploadBytes(imageRef, imageUpload).then((snapshot) => {
+    getDownloadURL(snapshot.ref).then((snn) => {
+      addDoc(offerCollectionRef,{
+          title:title,
+          details:details,
+          url:snn
       });
     });
-    router.back();
-    // createUser();
-    
-  };
+  });
+  router.back();
+};
+
 
   return (
     <div  className="h-screen w-full flex flex-col gap-2 justify-center items-center">

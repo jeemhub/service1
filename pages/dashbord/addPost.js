@@ -54,9 +54,6 @@ function App() {
             details:details,
             url:snn
         });
-        titleRef.current.value=null;
-        detailsRef.current.value=null;
-        fileRef.current.value=null;
       });
     });
     router.back();
