@@ -24,6 +24,7 @@ export default () => {
                 {console.log(profiles)}
                 {profiles.map((profile)=>{
                     return(<Profile
+                    key={profile.id}
                     name={profile.name}
                     nationality={profile.nationality}
                     Age={profile.Age}

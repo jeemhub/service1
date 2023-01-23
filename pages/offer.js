@@ -1,8 +1,8 @@
 import Nav from "../components/Nav"
 import Offer from "../components/Offer.js"
-import {db} from '../firebase'
 import { useState,useEffect } from "react";
 import { v4 } from "uuid";
+import {db} from '../firebase'
 import { collection } from "firebase/firestore";
 import { getDocs } from "firebase/firestore";
 export default function ourpost(){

@@ -100,6 +100,13 @@ export default () => {
                             </Link>
                         </div>
                         <div className="border-black border-solid gap-2 w-full border-2 flex flex-col self-center justify-center  items-center text-black p-2 h-auto rounded-lg">
+                            <h1 className="font-bold text-2xl">اسعارنا</h1>
+                            <p>تعديل صورة اسعارنا</p>
+                            <Link className="bg-blue-500 text-white font-bold text-xl p-2 rounded-md w-full" href='/dashbord/updateprice'>
+                                <button className="bg-blue-500 text-white font-bold text-xl p-2 rounded-md w-full"> انتقل</button>
+                            </Link>
+                        </div>
+                        <div className="border-black border-solid gap-2 w-full border-2 flex flex-col self-center justify-center  items-center text-black p-2 h-auto rounded-lg">
                             <h1 className="font-bold text-2xl">تسجيل خروج</h1>
                             <p>سجل خروجك الان</p>
                             <Link className="bg-red-500 text-white font-bold text-xl p-2 rounded-md w-full" href='/' onClick={() => {

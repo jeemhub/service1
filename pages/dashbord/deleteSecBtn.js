@@ -24,6 +24,7 @@ export default () => {
                 {console.log(profiles)}
                 {profiles.map((profile)=>{
                     return(<Profile
+                    key={profile.delid}
                     delid={profile.delid}
                     name={profile.name}
                     nationality={profile.nationality}

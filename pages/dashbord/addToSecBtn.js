@@ -85,10 +85,6 @@ function App() {
       alert('املئ الحقل الفارغ');
       return
     }
-    if(countryRef.current.value==''){
-      alert('املئ الحقل الفارغ');
-      return
-    }
     if (imageUpload == null) return;
     const imageRef = ref(storage, `secBtn/${imageUpload.name + v4()}`);
     uploadBytes(imageRef, imageUpload).then((snapshot) => {
@@ -104,14 +100,6 @@ function App() {
             salary:salary,
             url:snn
         });
-        nameRef.current.value=null;
-        nationalityRef.current.value=null;
-        AgeRef.current.value=null;
-        socialRef.current.value=null;
-        workRef.current.value=null;
-        experienceRef.current.value=null;
-        salaryRef.current.value=null;
-        fileRef.current.value=null;
       });
     });
     // createUser();
