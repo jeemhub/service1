@@ -3,9 +3,12 @@ import { Inter } from '@next/font/google'
 import axios from 'axios';
 import Nav from '../components/Nav';
 import Homecom from '../components/Homecom';
+import { useEffect } from 'react';
 const inter = Inter({ subsets: ['latin'] })
 
+
 export default function Home() {
+ 
   return (
     <>
       <Head>
@@ -15,8 +18,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main >
-       
-        <Nav/>
+        <Nav>
+        </Nav>
         <Homecom/>
       </main>
     </>
