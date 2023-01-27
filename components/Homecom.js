@@ -5,8 +5,22 @@ import { FaTiktok} from "react-icons/fa";
 import { useRouter } from "next/router";
 import img from '../public/photo_2023-01-08_21-24-24-removebg-preview.png'
 import Link from 'next/link';
+import { collection } from 'firebase/firestore';
+import { db } from "../firebase";
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { getDocs } from 'firebase/firestore';
 export default function Homecom() {
   const router = useRouter()
+  const offersCollectionRef = collection(db, "social");
+  const [offers, setoffers] = useState();
+  useEffect(()=>{
+      const getposts = async () => {
+          const data = await getDocs(offersCollectionRef);
+          setoffers(data.docs.map((doc) => ({ ...doc.data()})));
+        };
+        getposts();
+  },[])
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-gray-900">
       <img 
@@ -39,10 +53,10 @@ export default function Homecom() {
         </Link>
       </button>
       <div className="text-3xl text-white mt-5 flex flex-row">
-        <button onClick={()=>{router.push('https://www.snapchat.com/add/umkhalifa_bh?share_id=XbouJZ3')}} className="mx-1"><FaSnapchatGhost /></button>
+        <button onClick={()=>{router.push(offers?offers[0].snap:'')}} className="mx-1"><FaSnapchatGhost /></button>
         <button onClick={()=>{router.push('https://api.whatsapp.com/send?phone=+97333401013&text=مرحبا')}} className="mx-1"><FaWhatsapp /></button>
-        <button onClick={()=>{router.push('https://www.instagram.com/p/CnCmLqBIhQ5/?igshid=YmMyMTA2M2Y=')}} className="mx-1"><FaInstagram /></button>
-        <button onClick={()=>{router.push('https://vt.tiktok.com/ZS8rrF3gU/')}} className="mx-1"><FaTiktok /></button>
+        <button onClick={()=>{router.push(offers?offers[0].insta:'')}} className="mx-1"><FaInstagram /></button>
+        <button onClick={()=>{router.push(offers?offers[0].tiktok:'')}} className="mx-1"><FaTiktok /></button>
       </div>
 
     </div>
