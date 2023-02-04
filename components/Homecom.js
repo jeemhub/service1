@@ -47,11 +47,6 @@ export default function Homecom() {
           عاملاتنا المنتقاة للتحويل محلي
         </Link>
       </button>
-      <button className="text-blue-600  p-2 mt-4 border-solid border-blue-600 border-2 rounded-2xl text-3xl">
-        <Link href="dashbord">
-          لوحة التحكم
-        </Link>
-      </button>
       <div className="text-3xl text-white mt-5 flex flex-row">
         <button onClick={()=>{router.push(offers?offers[0].snap:'')}} className="mx-1"><FaSnapchatGhost /></button>
         <button onClick={()=>{router.push('https://api.whatsapp.com/send?phone=+97333401013&text=مرحبا')}} className="mx-1"><FaWhatsapp /></button>
