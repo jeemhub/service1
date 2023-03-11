@@ -26,7 +26,7 @@ export default () => {
         <br></br>
         <div className="flex flex-col justify-start p-2  items-center mt-24 mb-5 bg-gray-900 h-screen">
             <div className="grid md:grid-cols-2 xl:grid-cols-3 grid-cols-1 gap-4 h-auto mt-1 w-full">
-                {profiles.filter(el=>{return el.country=='الهند'}).map((profile)=>{
+                {profiles.filter(el=>{return el.country=='الهند' || el.country == 'INDIAN'||el.country=='India'||el.country=='india'}).map((profile)=>{
                     return(<Profile
                     key={profile.ip}
                     name={profile.name}

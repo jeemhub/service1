@@ -97,15 +97,15 @@ function App() {
             country:country,
             url:snn
         });
-        nameRef.current.value=null;
-        nationalityRef.current.value=null;
-        AgeRef.current.value=null;
-        socialRef.current.value=null;
-        workRef.current.value=null;
-        experienceRef.current.value=null;
-        salaryRef.current.value=null;
-        fileRef.current.value=null;
-        countryRef.current.value=null;
+        // nameRef.current.value=null;
+        // nationalityRef.current.value=null;
+        // AgeRef.current.value=null;
+        // socialRef.current.value=null;
+        // workRef.current.value=null;
+        // experienceRef.current.value=null;
+        // salaryRef.current.value=null;
+        // fileRef.current.value=null;
+        // countryRef.current.value=null;
       });
     });
     // createUser();
