@@ -23,6 +23,11 @@ import {
 
 
 function App() {
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
   const router=useRouter();
     const nameRef=useRef();
     const AgeRef=useRef();
@@ -31,7 +36,6 @@ function App() {
     const experienceRef=useRef();
     const salaryRef=useRef();
     const nationalityRef=useRef();
-    const countryRef=useRef();
     const fileRef=useRef();
   const [imageUpload, setImageUpload] = useState(null);
   const [imageUrls, setImageUrls] = useState();
@@ -41,7 +45,6 @@ function App() {
   const [work,setwork]=useState();
   const [experience,setexperience]=useState();
   const [salary,setsalary]=useState();
-  const [country,setcountry]=useState();
   const [nationality,setnationality]=useState();
   const offerCollectionRef = collection(db, "firstBtn");
   const  uploadFile = () => {
@@ -50,6 +53,10 @@ function App() {
       return
     }
     if( nationalityRef.current.value==''){
+      alert('املئ الحقل الفارغ');
+      return
+    }
+    if(selectedOption==''){
       alert('املئ الحقل الفارغ');
       return
     }
@@ -77,10 +84,7 @@ function App() {
       alert('املئ الحقل الفارغ');
       return
     }
-    if(countryRef.current.value==''){
-      alert('املئ الحقل الفارغ');
-      return
-    }
+   
     if (imageUpload == null) return;
     const imageRef = ref(storage, `firstBtn/${imageUpload.name + v4()}`);
     uploadBytes(imageRef, imageUpload).then((snapshot) => {
@@ -94,7 +98,7 @@ function App() {
             work:work,
             experience:experience,
             salary:salary,
-            country:country,
+            country:selectedOption,
             url:snn
         });
         // nameRef.current.value=null;
@@ -110,7 +114,6 @@ function App() {
     });
     // createUser();
     router.back()
-    
   };
 
   return (
@@ -191,15 +194,14 @@ function App() {
       />
     {/* //======================================= */}
       {/* //====================================== */}
-      <input
-      ref={countryRef}
-      placeholder="اكتب الدولة"
-        className="bg-gray-300 rounded-md p-2 w-full"
-        type="text"
-        onChange={(event) => {
-          setcountry(event.target.value);
-        }}
-      />
+    
+        <select className="border border-gray-500 p-2 mb-4 rounded-md bg-gray-300 text-black" onChange={handleOptionChange}>
+        <option value="" disabled selected hidden>اختر الدولة || Select the country</option>
+        <option value="India">الهند | India</option>
+        <option value="Philippines"> الفلبين | Philippines</option>
+        <option value="Indonesia">اندونيسيا | Indonesia</option>
+        <option value="Ethiopia">اثيوبيا | Ethiopia</option>
+      </select>
     {/* //======================================= */}
       <input
       ref={fileRef}
@@ -209,7 +211,9 @@ function App() {
           setImageUpload(event.target.files[0]);
         }}
         />
+      
       <button className="font-bold text-white text-2xl bg-blue-600 p-2 rounded-md w-full mt-2" onClick={uploadFile}>اضف عامل</button>
+      {/* <button className="font-bold text-white text-2xl bg-blue-600 p-2 rounded-md w-full mt-2" onClick={()=>{console.log(selectedOption)}}>console log</button> */}
       <Link className="text-blue-600 text-center font-bold  p-1 rounded-md" href='/dashbord'>
                 <button className="">الرجوع الى لوحة التحكم</button>
              </Link>
