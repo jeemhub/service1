@@ -121,7 +121,7 @@ export default function Home4(){
 <motion.h1 initial={{y:10, opacity: 0 }}
                whileInView={{y:0 , opacity: 1 }}
                viewport={{ once: false }}
-               transition={{duration:1}} className='text-2xl p-2 text-center'>الحل المثالي لجميع احتياجاتك المنزلية</motion.h1>
+               transition={{duration:1}} className='text-2xl p-2 text-center font-bold'>الحل المثالي لجميع احتياجاتك المنزلية</motion.h1>
 <motion.h1 initial={{y:10, opacity: 0 }}
                whileInView={{y:0 , opacity: 1 }}
                viewport={{ once: false }}
