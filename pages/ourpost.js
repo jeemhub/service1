@@ -20,7 +20,7 @@ export default function ourpost(){
     <main>
         {console.log(posts)}
         <Nav/>
-        <div className="h-screen flex flex-col justify-start items-end bg-gray-900 mt-24 p-5 text-white">
+        <div className="h-auto flex flex-col justify-start items-center bg-white mt-24 p-5 text-black">
         <h1 className="text-5xl font-bold mb-5">آخر الأخبار</h1>
         
         {posts.map((post)=>{

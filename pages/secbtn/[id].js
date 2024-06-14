@@ -28,7 +28,7 @@ export default () => {
       <Nav></Nav>
       {console.log(profile[0])}
       <br></br>
-      <div className="flex items-center flex-col  p-2 justify-center h-auto">
+      <div className="flex items-center flex-col  p-2 justify-center h-auto mt-12">
         <div className=" rounded-lg">
       <img className=" rounded-lg" onClick={()=>{router.push(profile[0]?.url)}} src={profile[0]?.url} height={100} width={160}></img>
         </div>

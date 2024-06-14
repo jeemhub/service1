@@ -37,7 +37,7 @@ useEffect(() => {
         
         <Nav/>
         
-        <div className="h-screen flex flex-col justify-start items-end bg-gray-900 mt-24 p-5 text-white">
+        <div className="h-screen flex flex-col justify-start items-center bg-white mt-24 p-5 text-black">
         <h1 className="text-5xl font-bold mb-5"> معلومات تهمك</h1>
         {sortArrayOfObjectById(infoes).map((post)=>{
           if(post.type == 'h1'){

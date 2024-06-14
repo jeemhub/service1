@@ -3,6 +3,7 @@ import { Inter } from '@next/font/google'
 import axios from 'axios';
 import Nav from '../components/Nav';
 import Homecom from '../components/Homecom';
+import Home4 from '../components/Home.js';
 import { useEffect } from 'react';
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +21,8 @@ export default function Home() {
       <main >
         <Nav>
         </Nav>
-        <Homecom/>
+        {/* <Homecom/> */}
+        <Home4/>
       </main>
     </>
   )

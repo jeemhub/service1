@@ -8,6 +8,7 @@ import { BsTranslate } from "react-icons/bs";
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect } from 'react';
+import { motion } from "framer-motion"
 function Nav() {
     const [togol, settogol] = useState(true);
     const [togol2, settogol2] = useState(false);
@@ -28,13 +29,13 @@ function Nav() {
     }
     return (
         <>
-        <div className='flex md:flex-row flex-col top-0 p-6 font-bold text-white bg-gray-900 md:justify-between  fixed z-50 w-screen'>
-            <div className='flex flex-row justify-between '>
+        <div className='flex md:flex-row flex-col top-0 p-6 font-bold text-black bg-white md:justify-between  fixed z-50 w-screen'>
+            <div className='flex flex-row justify-between w-full '>
                 <div className='flex flex-row'>
                     <div className='flex flex-row items-center'>
                         <button onClick={()=>{settogol2(!togol2);console.log(togol2);}} className="text-3xl mr-4"><BsTranslate/></button>
                         <Link href="/" >
-                           <h1 className='text-lg text-white font-bold border-solid border-2 border-white rounded-lg p-2'>مكتب أم خليفة</h1>
+                           <h1 className='text-lg text-black font-bold border-solid border-2 border-white rounded-lg p-2 hover:bg-blue-600 duration-500 rounded-md p-2 text-center hover:text-white'>مكتب أم خليفة</h1>
                         </Link>
                         {togol2?<span className='absolute left-1/2' id="google_translate_element"></span>:<br></br>}
                     <span className='absolute left-1/2 hidden' id="google_translate_element"></span>
@@ -44,8 +45,11 @@ function Nav() {
                     {togol ? <BsList /> : <BsXLg />}
                 </button>
             </div>
-            <ul className={`flex pt-2 md:flex-row flex-col md:ml-6 md:hidden text-md font-mono ${togol ? 'hidden' : ''}`}>
-            <li onClick={()=>settogol(!togol)} className='md:mx-4'><Link href="/about" >
+            <motion.ul initial={{ y: -10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 10, opacity: 0 }}
+            transition={{ duration: 0.2 }} className={`flex pt-2 md:flex-row flex-col md:ml-6 md:hidden text-md font-mono ${togol ? 'hidden' : ''}`}>
+            <li onClick={()=>settogol(!togol)} className='md:mx-4 '><Link href="/about" >
                     عن المكتب 
                 </Link></li>
                 <li onClick={()=>settogol(!togol)} className='md:mx-4'><Link href="/price" >
@@ -67,25 +71,25 @@ function Nav() {
               
               
                
-            </ul>
+            </motion.ul>
             <ul className={`md:flex pt-2 md:flex-row hidden  flex-col md:ml-6  text-md font-mono`}>
         
-                <li className='md:mx-4'><Link href="/communication" >
+                <li className='md:mx-4 hover:bg-blue-600 duration-500 rounded p-2 text-center hover:text-white'><Link href="/communication" >
                     تواصل معنا
                 </Link></li>
-                <li className='md:mx-4'><Link href="/info" >
+                <li className='md:mx-4 hover:bg-blue-600 duration-500 rounded p-2 text-center hover:text-white'><Link href="/info" >
                     معلومات تهمك
                 </Link></li>
-                <li className='md:mx-4'><Link href="/ourpost" >
+                <li className='md:mx-4 hover:bg-blue-600 duration-500 rounded p-2 text-center hover:text-white'><Link href="/ourpost" >
                     اخبارنا
                 </Link></li>
-                <li className='md:mx-4'><Link href="/offer" >
+                <li className='md:mx-4 hover:bg-blue-600 duration-500 rounded p-2 text-center hover:text-white'><Link href="/offer" >
                     عروضنا
                 </Link></li>
-                <li className='md:mx-4'><Link href="/about" >
+                <li className='md:mx-4 hover:bg-blue-600 duration-500 rounded p-2 text-center hover:text-white'><Link href="/about" >
                     عن المكتب
                 </Link></li>
-                <li onClick={()=>settogol(!togol)} className='md:mx-4'><Link href="/price" >
+                <li onClick={()=>settogol(!togol)} className='md:mx-4 hover:bg-blue-600 duration-500 rounded p-2 text-center hover:text-white'><Link href="/price" >
                      اسعارنا
                 </Link></li>
             </ul>

@@ -6,6 +6,7 @@ import { doc } from "firebase/firestore";
 import { deleteDoc } from "firebase/firestore";
 import {db} from '../firebase'
 import Link from "next/link";
+import { motion } from "framer-motion"
 export default (props) => {
   const router = useRouter();
 
@@ -20,13 +21,18 @@ export default (props) => {
 
   return (
     <>
-      <div className="flex flex-row justify-end  gap-1 bg-white h-auto rounded-xl overflow-hidden">
+      <motion.div
+      initial={{y:2, opacity: 0 }}
+      whileInView={{y:0 , opacity: 1 }}
+      viewport={{ once: false }}
+      transition={{duration:1}}
+       className="flex flex-row justify-end  gap-1 bg-white h-auto rounded-xl overflow-hidden border-2 border-black">
       <a 
         className="self-start m-6 text-green-600 text-4xl"
         href={`https://api.whatsapp.com/send?phone=+97333401013&text=${message+n}العمر ${props.Age+n}الجنسية ${props.nationality+n} السعر ${props.salary+n} الخبرة ${props.experience+n} اسم العاملة ${props.name+n}`}>
              <AiOutlineWhatsApp></AiOutlineWhatsApp>
         </a>
-        <div className="flex flex-col gap-2 items-end">
+        <div className="flex flex-col gap-2 items-end py-2">
           <h1 className="font-bold text-lg">{props.name}</h1>
           <div className="flex flex-row gap-1 text-white">
             <h3 className="p-1 rounded-lg bg-gray-900">{props.nationality}</h3>
@@ -56,7 +62,7 @@ export default (props) => {
           ></img>
         </div>
         
-      </div>
+      </motion.div>
     </>
   );
 };

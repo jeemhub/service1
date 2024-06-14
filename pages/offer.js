@@ -20,8 +20,8 @@ export default function ourpost(){
     <main>
        
         <Nav/>
-        <div className="h-screen flex flex-col justify-start items-end bg-gray-900 mt-24 p-5 text-white">
-        <h1 className="text-5xl font-bold mb-5">آخر العروض</h1>
+        <div className="h-screen flex flex-col justify-start items-center bg-white mt-24 p-5 text-black mb-8 pb-8">
+        <h1 className="text-5xl font-bold mb-5 sticky sticky top-20 bg-white w-full text-center p-8">آخر العروض</h1>
     
         {offers.map((offer)=>{
             return(<Offer title={offer.title} details={offer.details} key={v4()} url={offer.url}></Offer>)

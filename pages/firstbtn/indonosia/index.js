@@ -24,7 +24,7 @@ export default () => {
            
         <Nav></Nav>
         <br></br>
-        <div className="flex flex-col justify-start p-2  items-center mt-24 mb-5 bg-gray-900 h-screen">
+        <div className="flex flex-col justify-start p-2  items-center mt-24 mb-5 bg-white h-screen">
             <div className="grid md:grid-cols-2 xl:grid-cols-3 grid-cols-1 gap-4 h-auto mt-1 w-full">
                 {profiles.filter(el=>{return el.country=='اندنوسيا'|| el.country == 'INDONESIA'||el.country=='Indonesia'||el.country=='indonesia'}).map((profile)=>{
                     return(<Profile
