@@ -203,11 +203,11 @@ export default function Home4(){
 <motion.h1 initial={{y:10, opacity: 0 }}
                whileInView={{y:0 , opacity: 1 }}
                viewport={{ once: false }}
-               transition={{duration:1}} className='text-2xl p-2 text-center font-bold max-w-sm w-full'>خياركم الأول لأستقدام العمالة المنزلية</motion.h1>
+               transition={{duration:1}} className='text-2xl p-2 text-center font-bold max-w-sm w-full'>خياركم الأول لإستقدام العمالة المنزلية</motion.h1>
 <motion.h1 initial={{y:10, opacity: 0 }}
                whileInView={{y:0 , opacity: 1 }}
                viewport={{ once: false }}
-               transition={{duration:1}} className='text-2xl p-2 text-center max-w-sm w-full'>استقام أفضل العاملات المنتقاة بعناية لتناسب مع احتياجاتك الخاصة بكل احترافية ومصداقية</motion.h1>
+               transition={{duration:1}} className='text-2xl p-2 text-center max-w-sm w-full'>استقدام أفضل العاملات المنتقاة بعناية لتتناسب مع احتياجاتكم الخاصة بكل احترافية ومصداقية</motion.h1>
 <button className="bg-blue-600 text-white p-2 rounded-md  mt-5 font-bold text-xl ">
 <Link href="/firstbtn">
 عاملاتنا المطيعات بالطلب
@@ -234,17 +234,17 @@ export default function Home4(){
         <motion.p initial={{y:10, opacity: 0 }}
                whileInView={{y:0 , opacity: 1 }}
                viewport={{ once: false }}
-               transition={{duration:1}} className="text-center max-w-sm">هل تحتاج عاملات/عمال نظافة لدينا عاملات متخصصات في طباخات/طباخين/سواقات/سواقين عالية المستوى</motion.p>
+               transition={{duration:1}} className="text-center max-w-sm">  عاملات/عمال نظافة طباخات/طباخون/سواقات/سواقون / ورعاية الأطفال والعناية بكبار السن والعناية بالحالات والاحتياجات الخاصة</motion.p>
     </div>
     <div className='flex flex-col items-center justify-center mx-4 mr-12'>
         <motion.h1  initial={{y:10,opacity: 0 }}
                whileInView={{y:0 , opacity: 1 }}
                viewport={{ once: false }}
-               transition={{duration:0.5}} className='font-bold text-xl p-2 text-center'>رعاية الأطفال</motion.h1>
+               transition={{duration:0.5}} className='font-bold text-xl p-2 text-center'>توظيف أصحاب المهارات للمشاريع التجارية</motion.h1>
         <motion.p initial={{y:10, opacity: 0 }}
                whileInView={{y:0 , opacity: 1 }}
                viewport={{ once: false }}
-               transition={{duration:1}} className="text-center max-w-sm">العناية بكبار السن والعناية بالحالات  والاحتياجات الخاصة</motion.p>
+               transition={{duration:1}} className="text-center max-w-sm">طباخون/طباخات /موظفون/موظفات بيع/ موظفات صالون نسائي خياطون/خياطات محاسبون/محاسبات</motion.p>
     </div>
     <div className='flex flex-col items-center justify-center'>
         <motion.h1 initial={{y:10, opacity: 0 }}
@@ -255,6 +255,16 @@ export default function Home4(){
                whileInView={{y:0 , opacity: 1 }}
                viewport={{ once: false }}
                transition={{duration:1}} className="text-center max-w-sm">جميع معاملات سوق العمل الجوازات السفارات البطاقة الذكية</motion.p>
+    </div>
+    <div className='flex flex-col items-center justify-center'>
+        <motion.h1 initial={{y:10, opacity: 0 }}
+               whileInView={{y:0 , opacity: 1 }}
+               viewport={{ once: false }}
+               transition={{duration:1}} className='font-bold text-xl p-2 text-center'>التوصيل</motion.h1>
+        <motion.p initial={{y:10, opacity: 0 }}
+               whileInView={{y:0 , opacity: 1 }}
+               viewport={{ once: false }}
+               transition={{duration:1}} className="text-center max-w-sm">توصيل العاملات الى سوق العمل السفارة المستشفى توصيل المستندات لجميع مناطق البحرين</motion.p>
     </div>
 </div>
 
@@ -279,7 +289,7 @@ export default function Home4(){
         <motion.p initial={{y:10, opacity: 0 }}
                whileInView={{y:0 , opacity: 1 }}
                viewport={{ once: false }}
-               transition={{duration:1}} className="text-center max-w-sm">نوفر لكم فريق عمل حريص على تنفيذ طلباتكم منذ اختياركم للعاملة حتى وصولها واستكمال عمل الأقامةوالبطاقة الذكية والتأمين</motion.p>
+               transition={{duration:1}} className="text-center max-w-sm">نوفر لكم فريق عمل حريص على تنفيذ طلباتكم منذ اختياركم للعاملة حتى وصولها واستكمال عمل الإقامة و البطاقة الذكية والتأمين</motion.p>
     </div>
     <div className='flex flex-col items-center justify-center mx-4 mr-12'>
         <motion.h1 initial={{y:10, opacity: 0 }}
@@ -289,7 +299,17 @@ export default function Home4(){
         <motion.p initial={{y:10, opacity: 0 }}
                whileInView={{y:0 , opacity: 1 }}
                viewport={{ once: false }}
-               transition={{duration:1}} className="text-center max-w-sm">فريق عمل متفان لتقديم أفضل الخدمات من الجنسية البحرينية الفلبينية الاثيوبية الهندية من أجل راحتكم ورضاكم</motion.p>
+               transition={{duration:1}} className="text-center max-w-sm">فريق عمل متفان لتقديم أفضل الخدمات من الجنسية البحرينية الفلبينية الأثيوبية الهندية من أجل راحتكم ورضاكم</motion.p>
+    </div>
+    <div className='flex flex-col items-center justify-center mx-4 mr-12'>
+        <motion.h1 initial={{y:10, opacity: 0 }}
+               whileInView={{y:0 , opacity: 1 }}
+               viewport={{ once: false }}
+               transition={{duration:1}} className='font-bold text-xl p-2 text-center'>ضمان ٣ شهور وأكثر</motion.h1>
+        <motion.p initial={{y:10, opacity: 0 }}
+               whileInView={{y:0 , opacity: 1 }}
+               viewport={{ once: false }}
+               transition={{duration:1}} className="text-center max-w-sm">يمكنكم استبدال العاملة خلال فترة الضمان بشروط العقد الثلاثي , والمساعدة في حل المشكلات بعد فترة الضمان بشكل ودي قدر المستطاع حيث أن موظفينا من الجنسية الأثيوبية والفلبينية والهندية مسخرين لخدمتكم</motion.p>
     </div>
 </div>
 
