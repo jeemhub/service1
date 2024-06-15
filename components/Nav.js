@@ -29,7 +29,7 @@ function Nav() {
     }
     return (
         <>
-        <div className='flex md:flex-row flex-col top-0 p-6 font-bold text-black bg-white md:justify-between  fixed z-50 w-screen'>
+        <div className='flex md:flex-row flex-col top-0 p-6 font-bold text-black bg-white md:justify-between  fixed z-50 w-full '>
             <div className='flex flex-row justify-between w-full '>
                 <div className='flex flex-row'>
                     <div className='flex flex-row items-center'>

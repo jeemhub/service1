@@ -22,7 +22,7 @@ export default () => {
         <>
         {offers?console.log(offers[0].imgurl):console.log('no image')}
         <Nav></Nav>
-        <div className='flex flex-col justify-center items-center h-screen w-full p-10'>
+        <div className='flex flex-col justify-center items-center h-screen w-full p-10 mt-10'>
             <img 
             onClick={()=>{router.push(offers?offers[0].imgurl:console.log('no image'))}}
             src={offers?offers[0].imgurl:console.log('no image')} 
