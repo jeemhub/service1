@@ -7,6 +7,7 @@ const noAuthRequired = [
    '/admin',
    '/secbtn/[id]',
    '/secbtn',
+   '/secbtn/nation/[nation]',
    '/firstbtn',
    '/firstbtn/ethiopia',
    '/firstbtn/india',
