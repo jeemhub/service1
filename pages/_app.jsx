@@ -11,7 +11,7 @@ const noAuthRequired = [
    '/firstbtn',
    '/firstbtn/ethiopia',
    '/firstbtn/india',
-   '/firstbtn/indonosia',
+   '/firstbtn/kenya',
    '/firstbtn/phippines',
    '/firstbtn/SriLanka',
    '/firstbtn/[id]',
