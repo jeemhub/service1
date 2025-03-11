@@ -199,7 +199,7 @@ function App() {
         <option value="" disabled selected hidden>اختر الدولة || Select the country</option>
         <option value="India">الهند | India</option>
         <option value="Philippines"> الفلبين | Philippines</option>
-        <option value="Indonesia">اندونيسيا | Indonesia</option>
+        <option value="Kenya">كينيا | Kenya</option>
         <option value="Ethiopia">اثيوبيا | Ethiopia</option>
         <option value="SriLanka">سريلانكا | SriLanka</option>
       </select>

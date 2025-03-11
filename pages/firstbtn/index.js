@@ -21,9 +21,9 @@ export default () => {
             اثيوبيا
           </button>
         </Link>
-        <Link href="/firstbtn/indonosia">
+        <Link href="/firstbtn/kenya">
           <button className="bg-white p-2 text-xl mt-5 px-10 rounded-md text-gray-900 font-bold hover:bg-blue-600 px-16 duration-500 hover:text-white">
-          اندونيسيا
+          كينيا
           </button>
         </Link>
         <Link href="/firstbtn/SriLanka">
